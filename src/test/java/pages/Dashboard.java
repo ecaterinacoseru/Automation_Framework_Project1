@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Dashboard {
@@ -24,5 +25,15 @@ public class Dashboard {
                 break;
             }
         }
+    }
+
+    public List<String> actualMenuList() {
+        List<String> actualMenu = new ArrayList<>();
+        for (WebElement eachMenu : menuList) {
+            if (!eachMenu.getAttribute("aria-label").strip().isBlank()) {
+                actualMenu.add(eachMenu.getAttribute("aria-label").strip());
+            }
+        }
+        return actualMenu;
     }
 }
