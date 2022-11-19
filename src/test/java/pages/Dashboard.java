@@ -16,4 +16,13 @@ public class Dashboard {
 
     @FindAll(@FindBy(xpath = "//ul[@id='appmenu']"))
     private List<WebElement> menuList;
+
+    public void moduleClicker(String moduleName) {
+        for (WebElement eachMenu : menuList) {
+            if (eachMenu.getAttribute("aria-label").strip().equalsIgnoreCase(moduleName)) {
+                eachMenu.click();
+                break;
+            }
+        }
+    }
 }

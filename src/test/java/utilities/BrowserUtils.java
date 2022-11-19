@@ -496,11 +496,9 @@ public class BrowserUtils {
     public static void waitForPresenceOfElement(By by, long time) {
         new WebDriverWait(Driver.getDriver(), time).until(ExpectedConditions.presenceOfElementLocated(by));
     }
-
     public static void clickElement(WebElement element){
         waitForVisibility(element, 10);
         element.click();
     }
-
 }
 
