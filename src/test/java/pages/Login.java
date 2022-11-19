@@ -41,7 +41,7 @@ public class Login {
     }
 
     public void goLoginPage() {
-        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
+        Driver.getDriver().get(ConfigurationReader.getProperty("env"));
     }
 
     public void loginBtnClick(){

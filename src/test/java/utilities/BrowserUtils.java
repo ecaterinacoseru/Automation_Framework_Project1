@@ -42,11 +42,11 @@ public class BrowserUtils {
     //• Arg1: WebDriver
     //• Arg2: String expectedTitle
     // BrowserUtils.verifyTitle(driver,"Google")
-    public static void verifyTitle(WebDriver driver, String expectedTitle){
+    public static void verifyTitle(String expectedTitle){
 
-        String actualTitle = driver.getTitle();
+        String actualTitle = Driver.getDriver().getTitle();
 
-        Assert.assertEquals(expectedTitle,actualTitle);
+        Assert.assertEquals(expectedTitle, actualTitle);
 
     }
 
