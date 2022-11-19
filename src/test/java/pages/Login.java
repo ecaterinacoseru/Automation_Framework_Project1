@@ -1,5 +1,6 @@
 package pages;
 
+import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -13,13 +14,13 @@ public class Login {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    @FindBy(name="username")
+    @FindBy(xpath = "//input[@id='user']")
     private WebElement inputUsername;
 
-    @FindBy(name="password")
+    @FindBy(xpath = "//input[@id='password']")
     private WebElement inputPassword;
 
-    @FindBy(xpath="//button[@type='submit']")
+    @FindBy(xpath="//input[@id='submit-form']")
     private WebElement loginButton;
 
     @FindBy(xpath = "//p[@class='warning wrongPasswordMsg']")
@@ -45,6 +46,11 @@ public class Login {
     }
 
     public void loginBtnClick(){
-        BrowserUtils.clickElement(loginButton);
+        loginButton.click();
     }
+
+    public void errorMessageVerification(String expectedErrorMessage) {
+        Assert.assertEquals(expectedErrorMessage, wrongPasswordMessage.getText().strip());
+    }
+    
 }
