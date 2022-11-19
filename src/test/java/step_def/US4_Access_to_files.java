@@ -33,11 +33,11 @@ public class US4_Access_to_files {
 
     @When("user click the top-left checkbox of the table")
     public void user_click_the_top_left_checkbox_of_the_table() {
-
+        files.setSelectAllCheckBox();
     }
 
     @Then("verify all the files are selected")
     public void verify_all_the_files_are_selected() {
-
+        files.verifySelectAllBox();
     }
 }
