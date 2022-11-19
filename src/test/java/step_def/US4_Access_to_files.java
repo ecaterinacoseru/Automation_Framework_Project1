@@ -22,8 +22,8 @@ public class US4_Access_to_files {
     }
 
     @When("the user clicks the {string} module")
-    public void the_user_clicks_the_module(String moduleName) {
-        dashboard.moduleClicker(moduleName);
+    public void the_user_clicks_the_module(String Files) {
+        dashboard.moduleClicker(Files);
     }
 
     @Then("verify the page title is {string}")

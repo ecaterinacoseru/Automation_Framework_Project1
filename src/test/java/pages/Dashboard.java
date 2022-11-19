@@ -14,7 +14,7 @@ public class Dashboard {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindAll(@FindBy(xpath = "//ul[@id='appmenu']"))
+    @FindAll(@FindBy(css = "#appmenu  a"))
     private List<WebElement> menuList;
 
     public void moduleClicker(String moduleName) {
