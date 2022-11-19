@@ -43,4 +43,8 @@ public class Login {
     public void goLoginPage() {
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
     }
+
+    public void loginBtnClick(){
+        BrowserUtils.clickElement(loginButton);
+    }
 }
