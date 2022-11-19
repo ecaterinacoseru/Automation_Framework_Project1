@@ -14,14 +14,16 @@ public class Login {
     }
 
     @FindBy(name="username")
-    public WebElement inputUsername;
+    private WebElement inputUsername;
 
     @FindBy(name="password")
-    public WebElement inputPassword;
+    private WebElement inputPassword;
 
     @FindBy(xpath="//button[@type='submit']")
-    public WebElement loginButton;
+    private WebElement loginButton;
 
+    @FindBy(xpath = "//p[@class='warning wrongPasswordMsg']")
+    private  WebElement wrongPasswordMessage;
 
     /**
      * This method will accept username and password and login to app
