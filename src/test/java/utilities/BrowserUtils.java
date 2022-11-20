@@ -500,5 +500,7 @@ public class BrowserUtils {
         waitForVisibility(element, 10);
         element.click();
     }
-}
 
+
+
+    }
